@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gente em Foco | BRASFORT</title>
+<!-- Fonte e Ícones -->
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --azul-escuro: #263868;
+  --azul-medio: #3a5179;
+  --azul-claro: #5a7ba8;
+  --cinza: #A9ABAE;
+  --branco: #FEFEFE;
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+}
+/* BODY */
+body {
+  background-color: #f8f9fc;
+  color: var(--azul-escuro);
+}
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(to bottom right, #081a4b, #13265ab9),
+url('brasfort-foto.jpeg') no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px 60px;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--azul-escuro), var(--azul-escuro));
+  border-radius: 0px;
+}
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease;
+}
+h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+/* ===== MAIN ===== */
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.intro h2 {
+  color: var(--azul-escuro);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+.intro p {
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: var(--branco);
+  border-radius: 18px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(38,56,104,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease forwards;
+}
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(38,56,104,0.12);
+  border-color: var(--azul-escuro);
+  box-shadow: 0 12px 30px rgba(38,56,104,0.15);
+}
+.card-icon {
+  font-size: 48px;
+  color: var(--azul-escuro);
+  margin-bottom: 15px;
+}
+.card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  min-height: 70px;
+}
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  background: var(--azul-escuro);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.card a:hover {
+  background: var(--azul-medio);
+}
+/* ===== FOOTER ===== */
+footer {
+  background: var(--azul-escuro);
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+  transition: background 0.3s ease;
+}
+footer:hover {
+  background: var(--azul-medio);
+}
+footer a {
+  color: var(--azul-claro);
+  text-decoration: none;
+  font-weight: 600;
+}
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  h1 { font-size: 1.9rem; }
+  header { padding: 60px 20px; }
+  .card { padding: 25px 20px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <img src="https://www.brasfort.com.br/images/brasfort-logo-01.png" class="logo" alt="Logo Brasfort">
+  <h1>Gente em Foco</h1>
+  <p>Seu canal de relacionamento com Gente & Gestão</p>
+</header>
+<main>
+  <section class="intro">
+    <h2>Conecte-se. Entenda. Evolua.</h2>
+    <p>
+      Tudo o que você precisa para acompanhar sua jornada profissional na Brasfort:
+      informações, benefícios, políticas e novidades que apoiam seu crescimento.
+    </p>
+  </section>
+  <section class="grid">
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+      <h3>Benefícios</h3>
+      <p>Conheça os auxílios e programas oferecidos aos colaboradores da Brasfort.</p>
+      <a href="#">Saiba Mais</a>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+      <h3>Carreira</h3>
+      <p>Descubra trilhas de crescimento, reconhecimento e oportunidades internas.</p>
+      <a href="#">Explorar</a>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-circle-question"></i></div>
+      <h3>Dúvidas</h3>
+      <p>Consulte respostas rápidas sobre processos, políticas e rotinas de RH.</p>
+      <a href="#">Consultar</a>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
+      <h3>Comunicações</h3>
+      <p>Fique por dentro das campanhas, comunicados e ações de Gente & Gestão.</p>
+      <a href="#">Ver Mais</a>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <h3>Aprendizado</h3>
+      <p>Acesse treinamentos internos, trilhas de capacitação e materiais educativos.</p>
+      <a href="#">Acessar</a>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+      <h3>Feedback & Reconhecimento</h3>
+      <p>Envie e receba feedbacks. Valorize quem faz a diferença no dia a dia.</p>
+      <a href="#">Contribuir</a>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+      <h3>Ideias & Inovação</h3>
+      <p>Tem sugestões para melhorar nossos processos? Compartilhe sua ideia!</p>
+      <a href="#">Enviar Ideia</a>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+      <h3>Saúde & Bem-Estar</h3>
+      <p>Programas e dicas voltadas ao equilíbrio emocional e qualidade de vida.</p>
+      <a href="#">Cuidar de Mim</a>
+    </div>
+  </section>
+</main>
+<footer>
+  © 2025 <strong>BRASFORT</strong> | Canal <strong>Gente em Foco</strong><br>
+  <a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a>
+</footer>
+</body>
+</html>
